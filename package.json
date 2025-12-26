@@ -1,15 +1,12 @@
 {
-  "name": "discord_bot",
+  "name": "discord-psq-bot",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "discord.js": "^14.25.1"
+    "discord.js": "^14.15.3"
   }
 }
