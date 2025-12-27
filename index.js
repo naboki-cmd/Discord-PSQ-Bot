@@ -285,4 +285,14 @@ client.once('ready', () => {
   console.log(`✔ Zalogowano jako ${client.user.tag}`);
 });
 
+process.on('unhandledRejection', (reason) => {
+  console.error('UNHANDLED REJECTION:', reason);
+  process.exit(1); // Render zrestartuje serwis
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('UNCAUGHT EXCEPTION:', err);
+  process.exit(1); // Render zrestartuje serwis
+});
+
 client.login(TOKEN);
