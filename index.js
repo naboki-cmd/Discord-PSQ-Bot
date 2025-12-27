@@ -294,9 +294,4 @@ process.on('uncaughtException', (err) => {
   console.error('UNCAUGHT EXCEPTION:', err);
   process.exit(1); // Render zrestartuje serwis
 });
-
-setTimeout(() => {
-  throw new Error('TEST CRASH');
-}, 30_000);
-
 client.login(TOKEN);
