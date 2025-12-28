@@ -1,3 +1,5 @@
+const http = require('http');
+
 // =========================
 // KONFIG
 // =========================
@@ -17,6 +19,15 @@ const {
 /* =========================
    TOKEN
 ========================= */
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('OK');
+}).listen(PORT, () => {
+  console.log(`HTTP keepalive on port ${PORT}`);
+});
+
 const TOKEN = process.env.TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 
